@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cllullunaS6.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Consumo api" HorizontalTextAlignment="Center"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <Label Text="datos" Grid.Row="0" Grid.Column="0" FontSize="20" TextColor="Red"/>
+        <Label Text="nombre" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Red"/>
+        <Label Text="apellido" Grid.Row="0" Grid.Column="2" FontSize="20" TextColor="Red"/>
+        <Label Text="edad" Grid.Row="0" Grid.Column="3" FontSize="20" TextColor="Red"/>
+
+        <ListView x:Name="listaestudiantes">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    
+
+                                </Grid.ColumnDefinitions>
+                                  <Label x:Name="lblcodigo" Text="{Binding codigo}" Grid.Row="0" Grid.Column="0" FontSize="20" TextColor="Red"/>
+                                  <Label x:Name="lblnombre" Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Red"/>
+                                <Label x:Name="lblapellido" Text="{Binding apellido}" Grid.Row="0" Grid.Column="2" FontSize="20" TextColor="Red"/>
+                                <Label x:Name="lbledad" Text="{Binding edad}" Grid.Row="0" Grid.Column="3" FontSize="20" TextColor="Red"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+
+        <Button x:Name="btnmostrar" Text="Consultar" Clicked="btnmostrar_Clicked" BackgroundColor="Black" TextColor="White"></Button>
+
+
+
+
+
+
+    </StackLayout>
+
+</ContentPage>
