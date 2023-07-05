@@ -15,7 +15,7 @@ namespace cllullunaS6
     {
         private string url = "http://192.168.10.48/ws_uisrael/post.php";
         private readonly HttpClient client = new HttpClient();
-        private ObservableCollection<estudiante> post;
+        private ObservableCollection<estudiante> _post;
         public MainPage()
         {
             InitializeComponent();
@@ -29,10 +29,16 @@ namespace cllullunaS6
             var contenido = await client.GetStringAsync(this.url);
 
             List<estudiante > postd = JsonConvert.DeserializeObject<List<estudiante>>(contenido);
-            post=new ObservableCollection<estudiante>(postd);
-            listaestudiantes.ItemsSource = post;
+            _post=new ObservableCollection<estudiante>(postd);
+            listaestudiantes.ItemsSource = _post;
 
            
+        }
+
+        private async void listaestudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var objectEstudiante = (estudiante)e.SelectedItem;
+            Navigation.PushAsync(new ActualizarEliminar(objectEstudiante));
         }
     }
 }

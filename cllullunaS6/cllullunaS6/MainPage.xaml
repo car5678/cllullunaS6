@@ -21,14 +21,15 @@
                 <ColumnDefinition/>
                 
             </Grid.ColumnDefinitions>
-        </Grid>
 
+        </Grid>
         <Label Text="datos" Grid.Row="0" Grid.Column="0" FontSize="20" TextColor="Red"/>
         <Label Text="nombre" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Red"/>
         <Label Text="apellido" Grid.Row="0" Grid.Column="2" FontSize="20" TextColor="Red"/>
         <Label Text="edad" Grid.Row="0" Grid.Column="3" FontSize="20" TextColor="Red"/>
+        
 
-        <ListView x:Name="listaestudiantes">
+        <ListView x:Name="listaestudiantes" ItemSelected="listaestudiantes_ItemSelected">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
