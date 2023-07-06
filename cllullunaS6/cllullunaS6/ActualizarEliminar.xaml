@@ -4,7 +4,7 @@
              x:Class="cllullunaS6.ActualizarEliminar">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Actualizar datos | Eliminar"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 

@@ -13,7 +13,7 @@ namespace cllullunaS6
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class insertarE : ContentPage
     {
-        public insertarE(estudiante datos)
+        public insertarE()
         {
             InitializeComponent();
         }
@@ -31,11 +31,18 @@ namespace cllullunaS6
 
 
 
-                    client.UploadValues("http://192.168.10.48/ws_uisrael/post.php" ,"post" ,parametros);
-                await DisplayAlert("alerta", "dato ingresado correctamente", "ok");
+                    client.UploadValues("http://192.168.56.1/ws_uisrael/post.php" ,"post" ,parametros);
+                await DisplayAlert("alerta", "Dato ingresado correctamente", "ok");
 
             }
-            catch (Exception ) { }
+            catch (Exception  ex) {
+                await DisplayAlert("alerta", "Error" + ex.Message, "ok");
+            }
+        }
+
+        private async void btnregresar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

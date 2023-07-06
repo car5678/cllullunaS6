@@ -1,20 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="cllullunaS6.insertarE">
+             x:Class="cllullunaS6.insertarE" >
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Guardar Estudiente"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <Label Text="insertar estudiante" FontSize="20"></Label>
+            <Label Text="Insertar Sstudiante" FontSize="20" TextColor="Black"></Label>
             <Entry x:Name="txtcodigo" Placeholder="Ingrese el codigo"/>
             <Entry x:Name="txtnombre" Placeholder="Ingrese el codigo"/>
             <Entry x:Name="txtapellido" Placeholder="Ingrese el codigo"/>
             <Entry x:Name="txtedad" Placeholder="Ingrese el codigo"/>
-            <Button x:Name="btninsertar" Text="Insertar" Clicked="btninsertar_Clicked"/>
+            
 
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Button x:Name="btninsertar" Text="Insertar" Clicked="btninsertar_Clicked" Grid.Row="0" Grid.Column="0"/>
+            <Button x:Name="btnregresar" Text="Regresar" Clicked="btnregresar_Clicked"  Grid.Row="0" Grid.Column="1"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
