@@ -5,15 +5,13 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Guardar Estudiente"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Guardar Estudiente" FontSize="30" HorizontalTextAlignment="Center"/>
 
-            <Label Text="Insertar Sstudiante" FontSize="20" TextColor="Black"></Label>
+           
             <Entry x:Name="txtcodigo" Placeholder="Ingrese el codigo"/>
-            <Entry x:Name="txtnombre" Placeholder="Ingrese el codigo"/>
-            <Entry x:Name="txtapellido" Placeholder="Ingrese el codigo"/>
-            <Entry x:Name="txtedad" Placeholder="Ingrese el codigo"/>
+            <Entry x:Name="txtnombre" Placeholder="Ingrese el nombre"/>
+            <Entry x:Name="txtapellido" Placeholder="Ingrese el apellido"/>
+            <Entry x:Name="txtedad" Placeholder="Ingrese el edad"/>
             
 
             <Grid>

@@ -13,7 +13,7 @@ namespace cllullunaS6
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ActualizarEliminar : ContentPage
     {
-        private string url = "http://192.168.56.1/ws_uisrael/post.php?codigo=";
+        private string url = "http://192.168.10.48/ws_uisrael/post.php?codigo=";
         public ActualizarEliminar(estudiante datos)
         {
             InitializeComponent();
@@ -38,6 +38,10 @@ namespace cllullunaS6
                 var parametros = txtcodigo.Text + "&nombre=" + txtnombre.Text + "&apellido=" + txtapellido.Text + "&edad=" + txtedad.Text;
 
                 cliente.UploadValues(url + parametros, "PUT", datos);
+                var mensaje = "dato actualizado con exito";
+
+                DependencyService.Get<mensaje>().showmsg(mensaje);
+
                 DisplayAlert("Alerta", "Dato Actualizado correctamente", "Ok");
                 Navigation.PushAsync(new MainPage());
 
@@ -60,6 +64,10 @@ namespace cllullunaS6
 
 
                 cliente.UploadValues(url + txtcodigo.Text, "Eliminar", datos);
+
+                var mensaje = "dato eliminado con exito";
+
+                DependencyService.Get<mensaje>().showmsg(mensaje);
                 DisplayAlert("Alerta", "Dato Eliminado correctamente", "Ok");
                 Navigation.PushAsync(new MainPage());
 

@@ -31,8 +31,14 @@ namespace cllullunaS6
 
 
 
-                    client.UploadValues("http://192.168.56.1/ws_uisrael/post.php" ,"post" ,parametros);
-                await DisplayAlert("alerta", "Dato ingresado correctamente", "ok");
+
+                    client.UploadValues("http://192.168.10.48/ws_uisrael/post.php" ,"post" ,parametros);
+
+                var mensaje = "dato ingresado con exito";
+
+                DependencyService.Get<mensaje>().showmsg(mensaje);
+
+               
 
             }
             catch (Exception  ex) {
