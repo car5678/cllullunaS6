@@ -4,12 +4,10 @@
              x:Class="cllullunaS6.ActualizarEliminar">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Actualizar datos | Eliminar"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Actualizar datos | Eliminar" />
 
             <Label Text="Actualizar Estudiante" FontSize="20"/>
-            <Entry x:Name="txtcodigo"  IsEnabled="False"/>
+            <Entry x:Name="txtcodigo"  IsEnabled="False" />
             <Entry x:Name="txtnombre" Placeholder="Ingrese el nombre"/>
             <Entry x:Name="txtapellido" Placeholder="Ingrese el apellido"/>
             <Entry x:Name="txtedad" Placeholder="Ingrese el edad" Keyboard="Numeric"/>

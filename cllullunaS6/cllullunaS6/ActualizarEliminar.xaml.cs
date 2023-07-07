@@ -11,9 +11,10 @@ using Xamarin.Forms.Xaml;
 namespace cllullunaS6
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class ActualizarEliminar : ContentPage
     {
-        private string url = "http://192.168.10.48/ws_uisrael/post.php?codigo=";
+        private string url = "http://192.168.56.1/ws_uisrael/post.php?codigo= ";
         public ActualizarEliminar(estudiante datos)
         {
             InitializeComponent();
@@ -60,7 +61,8 @@ namespace cllullunaS6
             {
                 WebClient cliente = new WebClient();
                 var datos = new System.Collections.Specialized.NameValueCollection();
-                datos.Add("codigo", txtcodigo.Text);
+                
+                datos.Add("codigo" , txtcodigo.Text);
 
 
                 cliente.UploadValues(url + txtcodigo.Text, "Eliminar", datos);

@@ -32,7 +32,7 @@ namespace cllullunaS6
 
 
 
-                    client.UploadValues("http://192.168.10.48/ws_uisrael/post.php" ,"post" ,parametros);
+                    client.UploadValues("http://192.168.56.1/ws_uisrael/post.php" ,"post" ,parametros);
 
                 var mensaje = "dato ingresado con exito";
 

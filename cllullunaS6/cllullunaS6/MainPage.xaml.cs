@@ -13,7 +13,7 @@ namespace cllullunaS6
 {
     public partial class MainPage : ContentPage
     {
-        private string url = "http://192.168.10.48/ws_uisrael/post.php";
+        private string url = "http://192.168.56.1/ws_uisrael/post.php";
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<estudiante> _post;
         
